@@ -28,11 +28,11 @@ jobs:
       # Step 4: Build the Docker image
       - name: Build the Docker image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_PASSWORD }}/sail .
+          docker build -t ${{ secrets.DOCKERHUB_PASSWORD }}/sail:1.0 .
 
       # Step 5: Push the Docker image to Docker Hub
       - name: Push the Docker image
         run: |
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/sail
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/sail:1.0
 
 
